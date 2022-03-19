@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./JS Quiz m.1/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Quiz</title>
+</head>
+<body>
+<!-- Top bar -->
+        <nav class="top-bar">
+            <span class="logo">
+                <i class="fab fa-centos"></i> <span>Stars</span> 
+            </span>
+            <ul class="info">
+                <i class="fab fa-first-order-alt">  0</i>
+                <span class="turn"><p class="time"></p></span>
+                <!-- <div class="profil">
+                    <p>Slobodan Stojanovic</p>
+                    <p><i class="fab fa-jedi-order"></i>Orden <span class="orden"></span>. vaznosti</p>
+                </div> -->
+            </ul>
+        </nav>
+
+<!-- Dobro dosli prozor-->
+        <div class="category-box">
+            <h2>Dobro dosli u <span> Quiz</span></h2>
+<!-- kategorije  -->
+            <div class="category">
+                <h3>Izaberite neku od ponudjenih kategorija sa pitanjima</h3>
+                <div class="ctgr category-1">
+                    <input type="radio" name="category" id="radion" checked value="Vasiona">
+                    <label for="radion">VASIONA</label>
+                </div>
+                <div class="ctgr category-2">
+                    <input type="radio" name="category" id="radions"  value="planeta-zemlja">
+                    <label for="radions">PLANETA ZEMLJA</label>
+                </div>
+            </div>
+                <button class="btn btn-sledece">Sledece</button>
+        </div>
+
+<!-- Pocetak kviza prozor -->
+    <div class="home-box custom-box hide">
+        <h3>Izabrali ste kategoriju<span></span></h3>
+        <p>Ova kategorija se sastoji od <span class="total-qustion"></span> pitanja</p>
+        <button type="button" class="btn btn-pocetak">Zapocni Kviz</button>
+    </div>
+
+<!-- Prozor sa pitanjima i odgovorima -->
+    <div class="quiz-box custom-box hide">
+        <div class="qustion-number"></div>
+        <div class="qustion-text"> </div>
+        <div class="option-container"></div>
+        <div class="next-qustion">
+            <button class="btn next" type="button">Sledece Pitanje</button>
+        </div>
+        <div class="answer-indicator"></div>
+
+<!-- Alert nemamo energije prozor-->
+        <div class="no-energy">Nemate dovoljno energije da bi odgovorali dalje na pitanja.<br>
+            Energija se puni na svakih 3 min po jedan podeok
+        </div>
+    </div>
+
+<!-- Rezultati quiza prozor -->
+        <div class="result-box custom-box hide">
+            <h1>Rezultat Quiza</h1>
+            <h2></h2>
+            <table>
+                <tr>
+                    <td>Ukupno pitanja iz kategorije</td>
+                    <td><span class="total-qustion"></span></td>
+                </tr>
+                <tr>
+                    <td>Pitanja na koja nismo dali odgovor</td>
+                    <td><span class="total-attemp"></span></td>
+                </tr>
+                <tr>
+                    <td>Tacni odgovori</td>
+                    <td><span class="total-corect"></span></td>
+                </tr>
+                <tr>
+                    <td>Netacni odgovori</td>
+                    <td><span class="total-wrong"></span></td>
+                </tr>
+                <tr>
+                    <td>Uspesnost u procentima</td>
+                    <td><span class="percentage"></span></td>
+                </tr>
+                <tr>
+                    <td>Ukupno odgovoreno na</td>
+                    <td><span class="total-score"></span></td>
+                </tr>
+            </table>
+            <button class="btn try-again" type="button">Pokusaj ponovo</button>
+            <button class="btn go-home" type="button">Vrati se na pocetnu stranicu</button>
+        </div>
+        <script src="JS Quiz m.1/question.js"></script>
+        <script src="JS Quiz m.1/main.js"></script>
+</body>
+</html>
